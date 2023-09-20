@@ -78,4 +78,8 @@ authRouter.get("/", auth, async (req, res)=> {
     res.json({...user._doc, token:req.token});
 });
 
+authRouter.get("/check", async (req, res)=> {
+    console.log('server is running');
+});
+
 module.exports = authRouter;
